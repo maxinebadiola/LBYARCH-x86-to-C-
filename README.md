@@ -23,9 +23,10 @@ The kernel was run 30 times over 3 different vector sizes (2^20, 2^24, and 2^30)
 ### Comparison
 
 - **Comparison with C (Debug Mode)**: 
-    - The x86-64 version was faster/slower by X% compared to the C version in debug mode.
+    - The x86-64 version was faster by 218% compared to the C version in debug mode.
 
 - **Comparison with C (Release Mode)**: 
-    - The x86-64 version was faster/slower by Y% compared to the C version in release mode.
+    - The x86-64 version was slower by around 3.1% compared to the C version in release mode.
 
 ### Analysis
+The assmebly time between the release version of the C kernel and x86-64 kernel is extremely minimal, compared to the debug version of the C Kernel where the assembly kernel runs over 2 times faster than the debug version. The reason for the release version running much faster than the debug version, even being a little bit faster than the assembly kernel, is because the release version optimizes the way the program is ran.
