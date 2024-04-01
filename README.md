@@ -6,7 +6,12 @@ The kernel was run 30 times over 3 different vector sizes (2^20, 2^24, and 2^30)
     - Average Execution Time: 
 
 2. **C (Release Mode)**: 
-    - Average Execution Time: 
+    - Average Execution Time:
+| C Release | Average Execution Time |
+| --------- | ---------------------- |
+| n = 1048576 | 0.00147 seconds  |
+| n = 16777216  | 0.01813 seconds  |
+| n = 1073741824  | 1.06573 seconds  |
 
 3. **x86-64 Assembly**: 
     - Average Execution Time: 
