@@ -1,3 +1,7 @@
+;LBYARCH SS1 [x86-to-C]
+;BADIOLA, MAXINE BEATRIZ ANTE
+;TAN AI, RAPHAEL C.TAN AI, RAPHAEL C.
+
 section .data
 section .text
     bits 64
@@ -7,13 +11,13 @@ section .text
 ; callee adjustment
 ; 1st param n (RCX)
 ; 2nd param sdot (RDX)
-; 3rd param vectorA (R8)
-; 4th param vectorB (R9)
+; 3rd param A (R8)
+; 4th param B (R9)
 dotProduct64:
     xor r10, r10 ;counter
-    movss xmm3, dword [rdx] ;sdot
-    ;if n=0 terminate
-    cmp rcx, 0  
+    xorps xmm3, xmm3 ;sdot
+    ;if n <= 1 terminate
+    cmp rcx, 1  
     jle end
 
 loop:
@@ -34,5 +38,5 @@ loop:
      jmp loop 
 
 end:
-   movss dword [rdx], xmm3 ;sdot
-   ret  
+   movss xmm0, xmm3 ;sdot
+   ret
