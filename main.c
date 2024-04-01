@@ -22,13 +22,10 @@ void fillTest(float vectorA[], float vectorB[], int size) {
 
 // n = vector size, sdot = output
 float dotProductC(int n, float sdot, float A[], float B[]) {
-    start = clock();
     for (int i = 0; i < n; i++) {
         sdot += A[i] * B[i];
     }
-    end = clock();
-    executionTime = ((double)(end - start)) / CLOCKS_PER_SEC;
-    printf("dotC, n = %d, sdot = %.2f, t = %.6f\n", n, sdot, executionTime);
+
     return sdot;
 }
 
@@ -49,7 +46,11 @@ int main() {
         for (int j = 0; j < 30; j++) {
             printf("=============================================================================================================================\n");
             //sdotC
+            start = clock();
             float sdotC = dotProductC(n, 0.0f, A, B);
+            end = clock();
+            executionTime = ((double)(end - start)) / CLOCKS_PER_SEC;
+            printf("dotC, n = %d, sdot = %.2f, t = %.6f\n", n, sdotC, executionTime);
             totalC += executionTime;
 
             //sdot64
