@@ -2,22 +2,19 @@
 
 The kernel was run 30 times over 3 different vector sizes (2^20, 2^24, and 2^30). The average execution times for each version are as follows:
 
-1. **C (Debug Mode)**: 
-    - Average Execution Time: 
+1. **C (Debug Mode)**:
 
 | C Debug | Average Execution Time |
 | --------- | --------- |
 | total | 0.769444 seconds |
 
-2. **C (Release Mode)**: 
-    - Average Execution Time:
+2. **C (Release Mode)**:
 
 | C Release | Average Execution Time |
 | --------- | --------- |
 | total | 0.344733seconds |
 
-3. **x86-64 Assembly**: 
-    - Average Execution Time:
+3. **x86-64 Assembly**:
   
 | x64 Release | Average Execution Time |
 | --------- | --------- |
