@@ -33,6 +33,7 @@ The kernel was run 30 times over 3 different vector sizes (2^20, 2^24, and 2^30)
 
 ![Release](/images/release.png)
 
+- At the end of each iteration a validity checker is ran, the function that checks is the following:
 ![Checker func](/images/image.png)
 
 ### Analysis
