@@ -29,8 +29,9 @@ The kernel was run 30 times over 3 different vector sizes (2^20, 2^24, and 2^30)
     - The x86-64 version was slower by around 3.1% compared to the C version in release mode.
  
 ## Screenshots of the Program
+1. Debug Version
 ![Debug](/images/debug.png)
-
+2. Release Version
 ![Release](/images/release.png)
 
 - At the end of each iteration a validity checker is ran, the function that checks is the following:
